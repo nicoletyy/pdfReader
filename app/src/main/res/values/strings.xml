@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">pdfreader</string>
+    <string name="file_name">shannon1948.pdf</string>
+    <string name="eraser">eraser</string>
+    <string name="highlight">highlight</string>
+    <string name="draw">draw</string>
+    <string name="page_up_btn">previous page</string>
+    <string name="page_down_btn">next page</string>
+    <string name="undoTxt">undo</string>
+    <string name="redoTxt">redo</string>
+    <string name="page_number">1/55</string>
+
+</resources>

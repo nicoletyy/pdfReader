@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!--    <ImageView-->
+    <!--            android:id="@+id/pdfImage"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:background="@android:color/white"-->
+    <!--            android:contentDescription="@null"-->
+    <!--            android:scaleType="fitCenter" />-->
+
+
+
+    <TextView
+            android:id="@+id/fileName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/file_name"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            tools:ignore="MissingConstraints"/>
+
+    <ToggleButton
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:text="@string/eraser"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/buttonEraser"
+            android:textOn="@string/eraser"
+            android:textOff="@string/eraser"/>
+
+    <ToggleButton
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:text="@string/highlight"
+            tools:ignore="MissingConstraints"
+            android:id="@+id/buttonHighlight"
+            app:layout_constraintEnd_toStartOf="@+id/buttonDraw"
+            android:textOn="@string/highlight"
+            android:textOff="@string/highlight"/>
+
+    <ToggleButton
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:text="@string/draw"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintEnd_toStartOf="@+id/buttonEraser"
+            android:id="@+id/buttonDraw"
+            android:textOn="@string/draw"
+            android:textOff="@string/draw"/>
+
+    <Button
+            android:id="@+id/pageUpBtn"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:text="@string/page_up_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/pdfLayout"/>
+    <Button
+            android:id="@+id/pageDownBtn"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="@string/page_down_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pageUpBtn"/>
+
+    <Button
+            android:id="@+id/undoBtn"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:text="@string/undoTxt"
+            app:layout_constraintStart_toEndOf="@+id/pageDownBtn"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+            android:id="@+id/redoBtn"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:text="@string/redoTxt"
+            app:layout_constraintStart_toEndOf="@+id/undoBtn"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <TextView
+            android:id="@+id/pageNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_number"
+            app:layout_constraintEnd_toEndOf="@+id/pdfLayout"
+            android:textSize="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <LinearLayout
+            android:id="@+id/pdfLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="188dp"
+            app:layout_constraintBottom_toTopOf="@+id/pageUpBtn"
+            app:layout_constraintTop_toBottomOf="@+id/buttonHighlight">
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
